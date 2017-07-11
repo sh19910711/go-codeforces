@@ -3,5 +3,5 @@ language: go
 install:
 - go get github.com/PuerkitoBio/goquery
 
-test:
+script:
 - make test
