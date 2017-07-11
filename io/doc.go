@@ -20,7 +20,7 @@ func Examples(w io.Writer, contest, problem, className string) error {
 
 	doc.Find(className).Each(func(i int, s *goquery.Selection) {
 		html, _ := s.Find("pre").Html()
-		fmt.Fprintln(w, strings.Replace(html, "<br/>", "\n", 2))
+		fmt.Fprintln(w, strings.Replace(html, "<br/>", "\n", -1))
 	})
 
 	return nil
